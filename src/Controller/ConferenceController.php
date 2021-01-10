@@ -26,13 +26,10 @@ class ConferenceController extends AbstractController
      */
     public function index(ConferenceRepository $conferenceRepository): Response
     {
-//        $greet = '';
-//        if ($name) {
-//            $greet = sprintf('<h1>Hello %s!</h1>', htmlspecialchars($name));
-//        }
+
         return new Response($this->twig->render('conference/index.html.twig', [
                         'conferences' => $conferenceRepository->findAll(),
-                    ]));
+        ]));
     }
 
     /**
@@ -41,7 +38,9 @@ class ConferenceController extends AbstractController
     public function show(Request $request, Conference $conference, CommentRepository $commentRepository): Response
     {
         $offset = max(0, $request->query->getInt('offset', 0));
+
         $paginator = $commentRepository->getCommentPaginator($conference, $offset);
+
         return new Response($this->twig->render('conference/show.html.twig', [
             'conference' => $conference,
             'comments' => $paginator,

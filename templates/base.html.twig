@@ -9,11 +9,12 @@
     <header>
         <h1><a href="{{ path('homepage') }}">Guestbook</a></h1>
         <ul>
-            {% for conference in conferences %}
-                <li><a href="{{ path('conference', { id: conference.id }) }}">{{ conference }}</a></li>
-            {% endfor %}
+{#            {% for conference in conferences %}#}
+{#                <li><a href="{{ path('conference', { id: conference.id }) }}">{{ conference }}</a></li>#}
+{#            {% endfor %}#}
         </ul>
         <hr />
+        <a href="{{ path('admin_user') }}">Пользователи</a>
     </header>
     {% block body %}{% endblock %}
     {% block javascripts %}{% endblock %}

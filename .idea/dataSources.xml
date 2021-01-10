@@ -7,7 +7,7 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://laravel.local:3306/laravel</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - mykedr@localhost" uuid="b636b006-cf21-4858-8285-5d203ae81c0a">
+    <data-source source="LOCAL" name="mykedr@localhost" uuid="29b99080-89c6-41db-8307-8ac1088dc6e0">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
